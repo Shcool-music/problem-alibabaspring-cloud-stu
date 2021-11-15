@@ -7,3 +7,19 @@ spring:
       # >= 6.x com.mysql.cj.jdbc.Driver
       # <=5.x com.mysql.jdbc.Driver
       driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        #nacos service 地址
+        server-addr: 192.168.0.105:8848
+        #指定namespace
+        #namespace: 53a1842b-5567-4047-a131-67e8ed6064a9
+        #指定集群名称
+        #cluster-name: xiamen
+        metadata:
+          version: 1
+          name: problem
+  application:
+    name: user-center
+server:
+  port: 8020

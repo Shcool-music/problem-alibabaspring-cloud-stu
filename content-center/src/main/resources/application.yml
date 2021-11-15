@@ -5,6 +5,12 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: 123456
-
+  cloud:
+    nacos:
+      discovery:
+        #nacos service 地址
+        server-addr: 192.168.0.105:8848
+  application:
+    name: content-center
 server:
   port: 8010
