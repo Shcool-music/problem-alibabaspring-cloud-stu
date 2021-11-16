@@ -14,3 +14,13 @@ spring:
     name: content-center
 server:
   port: 8010
+
+user-center:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#开启ribbon的饥饿加载模式（多个用逗号隔开）
+ribbon:
+  eager-load:
+    clients: user-center
+    enabled: true

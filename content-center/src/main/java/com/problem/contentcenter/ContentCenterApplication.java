@@ -3,6 +3,7 @@ package com.problem.contentcenter;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +19,7 @@ public class ContentCenterApplication {
 	//在spring 容器中创建一个对象，RestTemplate ；名称/ID是方法名
 	//=<bean id = "xxx" class="xxx.RestTemplate">
 	@Bean
+	@LoadBalanced
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
